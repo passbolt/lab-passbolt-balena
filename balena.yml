@@ -119,4 +119,4 @@ data:
     - imx8m-var-dart
     - var-som-mx6
     - imx7-var-som
-version: 3.5.2
+version: 3.5.2-1
