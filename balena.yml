@@ -5,7 +5,7 @@ description: >-
   Passbolt is an open source password manager designed for collaboration.
   You can securely generate, store, manage and monitor your team credentials.
   https://www.passbolt.com
-joinable: false
+joinable: true
 post-provisioning: >-
   ## passbolt
   
