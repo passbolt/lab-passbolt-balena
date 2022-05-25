@@ -13,14 +13,17 @@ post-provisioning: >-
   Connect to passbolt terminal from your balena console and create your first passbolt user:
   
   ```
+  
   $ su -s /bin/bash -c "/usr/share/php/passbolt/bin/cake passbolt \
       register_user -u username@domain.tld \
       -f 'name' -l 'surname' -r admin" www-data
+  
   ```
   
   A confirmation with your registering URL will be displayed:
   
   ```
+
        ____                  __          ____  
       / __ \____  _____ ____/ /_  ____  / / /_ 
      / /_/ / __ `/ ___/ ___/ __ \/ __ \/ / __/ 
@@ -32,6 +35,7 @@ post-provisioning: >-
   User saved successfully.
   To start registration follow the link provided in your mailbox or here: 
   https://xxxxxxxx.balena-devices.com/setup/install/b549d878-xxxx-xxxx-xxxx-7206986d27f0/c3aab73e-xxxx-xxxx-xxxx-7e28c70299c6
+
   ```
   
   You are good to go to configure your passbolt private key.
