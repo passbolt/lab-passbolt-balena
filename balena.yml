@@ -63,7 +63,7 @@ data:
     - BALENA_HOST_CONFIG_gpu_mem: 256
     - BALENA_HOST_CONFIG_gpu_mem_512: 128
     - BALENA_HOST_CONFIG_dtoverlay: vc4-fkms-v3d
-  defaultDeviceType: raspberrypi
+  defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - n510-tx2
     - asus-tinker-board
