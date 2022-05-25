@@ -1,41 +1,26 @@
 name: passbolt
 type: sw.application
+version: 3.5.2-2
 description: >-
+  Passbolt is an open source password manager designed for collaboration.
+  You can securely generate, store, manage and monitor your team credentials.
+  https://www.passbolt.com
+joinable: false
+post-provisioning: >-
+  ## passbolt
+  
   Passbolt is an open source password manager designed for collaboration. You can securely generate, store, manage and monitor your team credentials.
 
   Get access to all of your logins and passwords from multiple browsers or even your mobile phone. Create strong random passwords, thanks to the fully customizable password generator, and share them instantly with your team.
 
-  Boost collaboration & productivity:
-  - Easily share one password, or a folder with a single user or a group of users;
-  - Use personal or shared tags to identify passwords and secrets;
-  - Give specific access rights to a user or group;
-  - Get detailed reporting on access & change history.
-
-  Security by design. Audited and certified:
-  - True end-to-end encryption;
-  - Interoperable cryptography based on OpenPGP;
-  - Full control your own encryption key;
-  - Access revocation that actually works;
-  - Regularly audited by independent auditors.
-
-  Made in Europe. Privacy by default:
-  - Host it in our cloud, located in Europe;
-  - Or self-host it for full data ownership;
-  - No tracker, no strings attached.
-
-  Passbolt source code comes under an AGPL license (yes even the commercial version) and is publicly available. You are free to audit it, contribute to it, or redistribute it.
-
-  https://www.passbolt.com
-
-  https://github.com/passbolt
-joinable: false
-post-provisioning: >-
   ## Usage instructions
   
   Once passbolt deployed on your raspberry, from your balena dashboard:
   
   * enable your public device url
+
   * set this url as `APP_FULL_BASE_URL` value in device variables section
+  
   * connect to passbolt terminal and create your first passbolt user:
   
   ```
@@ -65,6 +50,48 @@ post-provisioning: >-
   ```
   
   Click on the link to finish your first user creation
+
+  You can get help on https://help.passbolt.com and  https://community.passbolt.com
+
+  ### Boost collaboration & productivity:
+  
+  * Easily share one password, or a folder with a single user or a group of users;
+  
+  * Use personal or shared tags to identify passwords and secrets;
+  
+  * Give specific access rights to a user or group;
+  
+  * Get detailed reporting on access & change history.
+
+  ### Security by design. Audited and certified:
+  
+  * True end-to-end encryption;
+  
+  * Interoperable cryptography based on OpenPGP;
+  
+  * Full control your own encryption key;
+  
+  * Access revocation that actually works;
+  
+  * Regularly audited by independent auditors.
+
+  ### Made in Europe. Privacy by default:
+  
+  * Host it in our cloud, located in Europe;
+  
+  * Or self-host it for full data ownership;
+  
+  * No tracker, no strings attached.
+
+  ### Resources
+
+  * https://www.passbolt.com
+
+  * https://github.com/passbolt
+
+  * https://help.passbolt.com
+
+  * https://community.passbolt.com
 assets:
   repository:
     type: blob.asset
@@ -149,4 +176,3 @@ data:
     - imx8m-var-dart
     - var-som-mx6
     - imx7-var-som
-version: 3.5.2-1
