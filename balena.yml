@@ -2,6 +2,7 @@ name: passbolt
 type: sw.application
 description: >-
   Deploy passbolt on your raspberry from https://www.balena.io/
+joinable: false
 post-provisioning: >-
   ## Usage instructions
 
