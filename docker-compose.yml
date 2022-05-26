@@ -15,7 +15,7 @@ services:
       - "3306"
 
   passbolt:
-    image: anatomicjc/passbolt:3.5.0-ce-multiarch
+    image: anatomicjc/passbolt:3.6.0-1-ce-multiarch
     #Alternatively you can use rootless:
     #image: passbolt/passbolt:latest-ce-non-root
     restart: unless-stopped
