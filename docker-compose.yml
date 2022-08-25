@@ -1,14 +1,28 @@
 version: '2'
+
+x-env:
+  &passbolt-env
+  APP_FULL_BASE_URL: https://a-very-long-generated-id.balena-devices.com/
+  DATASOURCES_DEFAULT_HOST: "db"
+  DATASOURCES_DEFAULT_USERNAME: "passbolt"
+  DATASOURCES_DEFAULT_PASSWORD: "P4ssb0lt"
+  DATASOURCES_DEFAULT_DATABASE: "passbolt"
+  EMAIL_TRANSPORT_DEFAULT_PORT: 587
+  EMAIL_TRANSPORT_DEFAULT_HOST: "smtp.domain.tld"
+  EMAIL_DEFAULT_FROM: "admin@domain.tld"
+  BACKUP_INTERVAL: "86400"
+  MYSQL_ROOT_PASSWORD: "rootpassword"
+  MYSQL_DATABASE: "passbolt"
+  MYSQL_USER: "passbolt"
+  MYSQL_PASSWORD: "P4ssb0lt"
+  TZ: "Europe/Paris"
+
 services:
   db:
     image: yobasystems/alpine-mariadb
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: "rootpassword"
-      MYSQL_DATABASE: "passbolt"
-      MYSQL_USER: "passbolt"
-      MYSQL_PASSWORD: "P4ssb0lt"
-      TZ: "Europe/Paris"
+      <<: *passbolt-env
     volumes:
       - database_volume:/var/lib/mysql
     expose:
@@ -22,10 +36,7 @@ services:
   backup:
     image: rclone/rclone
     environment:
-      MYSQL_DATABASE: "passbolt"
-      MYSQL_USER: "passbolt"
-      MYSQL_PASSWORD: "P4ssb0lt"
-      BACKUP_INTERVAL: "86400"
+      <<: *passbolt-env
     entrypoint:
       - /bin/ash
     command: |-
@@ -54,14 +65,7 @@ services:
     links:
       - "db"
     environment:
-      APP_FULL_BASE_URL: https://a-very-long-generated-id.balena-devices.com/
-      DATASOURCES_DEFAULT_HOST: "db"
-      DATASOURCES_DEFAULT_USERNAME: "passbolt"
-      DATASOURCES_DEFAULT_PASSWORD: "P4ssb0lt"
-      DATASOURCES_DEFAULT_DATABASE: "passbolt"
-      EMAIL_TRANSPORT_DEFAULT_PORT: 587
-      EMAIL_TRANSPORT_DEFAULT_HOST: "smtp.domain.tld"
-      EMAIL_DEFAULT_FROM: "admin@domain.tld"
+      <<: *passbolt-env
     volumes:
       - gpg_volume:/etc/passbolt/gpg
       - jwt_volume:/etc/passbolt/jwt
