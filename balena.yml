@@ -1,6 +1,6 @@
 name: passbolt
 type: sw.application
-version: 3.7.1-1
+version: 3.7.1-2
 description: >-
   Passbolt is an open source password manager designed for collaboration.
   You can securely generate, store, manage and monitor your team credentials.
@@ -51,7 +51,7 @@ post-provisioning: >-
   
   Click on the link to finish your first user creation
 
-  You can get help on https://help.passbolt.com and  https://community.passbolt.com
+  You can get help on https://help.passbolt.com, https://community.passbolt.com or https://forums.balena.io/t/run-passbolt-password-manager-on-balena/358466
 
   ### Boost collaboration & productivity:
   
