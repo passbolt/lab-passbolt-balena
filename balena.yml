@@ -1,6 +1,6 @@
 name: passbolt
 type: sw.application
-version: 3.10.0-1
+version: 3.11.0-1
 description: >-
   Passbolt is an open source password manager designed for collaboration.
   You can securely generate, store, manage and monitor your team credentials.
