@@ -60,7 +60,7 @@ services:
       - jwt_volume:/etc/passbolt/jwt
 
   passbolt:
-    image: anatomicjc/passbolt:3.12.0-3-ce-multiarch
+    image: passbolt/passbolt:4.0.0-2-ce
     restart: unless-stopped
     links:
       - "db"
