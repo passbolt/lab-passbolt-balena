@@ -60,7 +60,7 @@ services:
       - jwt_volume:/etc/passbolt/jwt
 
   passbolt:
-    image: passbolt/passbolt:4.4.2-1-ce
+    image: passbolt/passbolt:4.6.0-1-ce
     restart: unless-stopped
     links:
       - "db"
